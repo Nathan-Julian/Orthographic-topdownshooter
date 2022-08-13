@@ -1992,8 +1992,8 @@ GameObject:
   - component: {fileID: 1700765653}
   - component: {fileID: 1700765652}
   - component: {fileID: 1700765651}
-  - component: {fileID: 1700765650}
   - component: {fileID: 1700765649}
+  - component: {fileID: 1700765650}
   - component: {fileID: 1700765655}
   m_Layer: 0
   m_Name: Player
@@ -2111,7 +2111,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1700765655
 MonoBehaviour:
@@ -2125,7 +2125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59023bee9ea8b0b498e27493093af29b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  cam: {fileID: 963194227}
+  fireRateDelay: 0.2
 --- !u!1001 &1762384426
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2735,7 +2736,7 @@ Transform:
   - {fileID: 1832249547}
   - {fileID: 1047995927}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2097233782
 PrefabInstance:
