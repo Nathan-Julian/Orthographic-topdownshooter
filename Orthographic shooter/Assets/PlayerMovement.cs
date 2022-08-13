@@ -13,23 +13,24 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 movement;
 
-    // Update is called once per frame
     void Update()
     {
+        //Get keyboard Input and store in movement vector
         movement.x = Input.GetAxisRaw("Horizontal");
-        movement.z = Input.GetAxisRaw("Vertical");
+        movement.z = Input.GetAxisRaw("Vertical");       
+
+        PlayerRB.drag = drag;
     }
 
     void FixedUpdate()
     {
-        //PlayerRB.MovePosition(PlayerRB.position + movement * moveForce * Time.fixedDeltaTime);
+        //Add force from movement vector
         PlayerRB.AddForce(movement * moveForce * Time.fixedDeltaTime);
-        PlayerRB.drag = drag;
+
+        //if there is no movement input, apply a decelerating force
         if(movement.x == 0 && movement.z == 0)
         {
-            Debug.Log("no input, applying decel Force");
             PlayerRB.AddForce(-PlayerRB.velocity * decelForce * Time.fixedDeltaTime);
         }
-        Debug.Log(movement);
     }
 }
