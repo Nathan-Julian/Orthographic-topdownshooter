@@ -4,7 +4,15 @@ using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
+    public float testxoffset;
+    public float testyoffset;
+    public float testzoffset;
+    public float testwoffset;
+
+
+
     public Camera cam;
+    public GameObject projectile;
 
     public float fireRateDelay = 1;
 
@@ -37,6 +45,7 @@ public class PlayerShooting : MonoBehaviour
         aimPos = hit.point;
 
         Debug.DrawLine(cam.transform.position, aimPos, Color.red);
+        Debug.DrawLine(transform.position, aimPos, Color.green);
 
         //Look towards the aim point, rotate only on y axis
         transform.LookAt(new Vector3(aimPos.x, transform.position.y, aimPos.z));
@@ -45,6 +54,9 @@ public class PlayerShooting : MonoBehaviour
         if(m1Down == true && timeToShoot <= Time.time)
         {
             Debug.Log("shot");
+            Instantiate(projectile, transform.position, transform.rotation);
+
+
             timeToShoot = Time.time + fireRateDelay;
         }
     }
