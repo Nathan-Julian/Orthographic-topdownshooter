@@ -1617,7 +1617,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 375
+    m_Bits: 887
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -2362,11 +2362,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59023bee9ea8b0b498e27493093af29b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testxoffset: 0
-  testyoffset: 0
-  testzoffset: 0
-  testwoffset: 0
-  testOb: {fileID: 0}
   cam: {fileID: 963194227}
   projectile: {fileID: 3703522618753833520, guid: 5d41136538be8c9499b46dec8066177b, type: 3}
   fireRateDelay: 0.2
