@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 244fb1a9c96fb8244966fcd892505db0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileSpeed: 5
+  ProjectileSpeed: 10
   lifetime: 5
   Totalreflections: 3
   player: {fileID: 0}

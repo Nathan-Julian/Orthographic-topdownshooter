@@ -14,23 +14,19 @@ public class ProjectileMotion : MonoBehaviour
     int reflections = 0;
     void Start()
     {
+        //rotate to face in correct direction, probably won't be issue once projectile gets custom model
         transform.Rotate(90, 0, 0);
+        //set killTime to the time when the object should be deleted
         killTime = Time.time + lifetime;
 
-        //setup projectile ignore(player and other projectiles)
+        //setup projectile ignoreCollisions(player and other projectiles)
         Physics.IgnoreLayerCollision(8, 9, true);
         Physics.IgnoreLayerCollision(9, 9, true);
-
-        //code I stole to find and ignore gameobjects with layer 8 - Projectile_ignoreFirst
-        //GameObject[] otherObjects = GameObject.FindGameObjectsWithLayer(8);
-        //foreach (GameObject obj in otherObjects) 
-        //{
-        //    Physics.IgnoreCollision(obj.GetComponent<Collider>(), GetComponent<Collider>()); 
-        //}    
     }
 
     void FixedUpdate()
     {
+        //check if it has been killTime since object was instantiated
         if(killTime <= Time.time)
         {
             Destroy(gameObject);
@@ -63,7 +59,7 @@ public class ProjectileMotion : MonoBehaviour
         
 
     }
-
+    //move function, might add more later?
     void move()
     {
         transform.Translate(transform.up * ProjectileSpeed * Time.fixedDeltaTime, Space.World);
