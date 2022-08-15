@@ -8,8 +8,7 @@ public class PlayerShooting : MonoBehaviour
     public float testyoffset;
     public float testzoffset;
     public float testwoffset;
-
-
+    public GameObject testOb;
 
     public Camera cam;
     public GameObject projectile;
